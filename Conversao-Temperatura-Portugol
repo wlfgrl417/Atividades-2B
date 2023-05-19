@@ -1,0 +1,69 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		caracter con 
+		escreva("Qual conversão deseja realizar?\n")
+		escreva("1 - Celsius para Fahrenheit\n")
+		escreva("2 - Celsius para Kelvin\n")
+		escreva("3 - Fahrenheit para Celsius\n")
+		escreva("4 - Fahrenheit para Kelvin\n")
+		escreva("5 - Kelvin para Celsius\n")
+		escreva("6 - Kelvin para Fahrenheit\n")
+		escreva("Opção: ")
+		leia(con)
+		inteiro c, f, k
+		se(con == '1') {
+			inteiro cf
+			escreva("Digite uma temperatura em Celsius: ")
+			leia(c)
+			cf = c * (9/5) + 32
+			escreva(cf,"° em Fahrenheit.")
+		}
+
+		senao se(con == '2') {
+			inteiro ck
+			escreva("Digite uma temperatura em Celsius: ")
+			leia(c)
+			ck = c * (9/5) + 32
+			escreva(ck," em Kelvin.")
+		}
+		
+		senao se(con == '3') {
+			inteiro fc
+			escreva("Digite uma temperatura em Fahrenheit: ")
+			leia(f)
+			fc = (f - 32)*5/9
+			escreva(fc,"° em Celsius.")
+		}
+		
+		senao se(con == '4') {
+			inteiro fk
+			escreva("Digite uma temperatura em Fahrenheit: ")
+			leia(f)
+			fk = (f - 32)*5/9 + 273.15
+			escreva(fk," em Kelvin.")
+		}
+
+		senao se(con == '5') {
+			inteiro kc
+			escreva("Digite uma temperatura em Celsius: ")
+			leia(k)
+			kc = k - 273.15
+			escreva(kc,"° em Celsius.")
+		}
+
+		senao se(con == '6') {
+			inteiro kf
+			escreva("Digite uma temperatura em Fahrenheit: ")
+			leia(k)
+			kf = (k - 273.15)*9/5 + 32
+			escreva(kf,"° em Fahrenheit.")
+		}
+		senao {
+			escreva("\n---Digite um valor válido!---\n")
+			inicio()
+		}
+	}
+}
